@@ -1,11 +1,5 @@
 function logErrors (err, req, res, next) {
   console.error(err);
-  // if (err instanceof Error) {
-  //   console.error(err.stack);
-  //   return res.status(500).json({
-  //     message: err.message,
-  //   });
-  // }
   next(err);
 }
 
@@ -21,7 +15,7 @@ function boomerrorHandler (err, req, res, next) {
     const { output } = err;
     res.status(output.statusCode).json(output.payload);
   } else {
-  next(err);
+    next(err);
   }
 }
 
