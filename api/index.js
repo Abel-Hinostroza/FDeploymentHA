@@ -37,5 +37,5 @@ app.use(boomerrorHandler);
 app.use(errorHandler);
 
 app.listen(port, () => {
-  console.log('Server running in http://localhost:${port}/api/v1');
+  console.log('Server running in port: ', port);
 });
